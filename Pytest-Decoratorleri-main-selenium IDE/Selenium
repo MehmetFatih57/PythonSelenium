@@ -1,0 +1,81 @@
+Selenium IDE Komutları Hakkında Bilgiler
+Giriş:
+
+Selenium IDE, web tarayıcı etkileşimlerini otomatikleştirmek için güçlü bir araçtır. Test senaryolarını kaydetmek ve düzenlemek için kullanıcı dostu bir arayüz sunar ve web öğelerini manipüle etmek için çok çeşitli komutları destekler.
+
+Yaygın Selenium IDE Komutları:
+
+Gezinme Komutları:
+
+open: Belirli bir URL'yi tarayıcıda açar
+go to: Geçmişte ziyaret edilmiş bir URL'ye gider
+refresh: Mevcut sayfayı yeniler
+maximize window: Tarayıcı penceresini en üst düzeye çıkarır
+set window size: Tarayıcı penceresi boyutunu belirli boyutlara ayarlar
+Öğe Etkileşimi Komutları:
+
+click: Belirli bir web öğesine tıklar
+type: Metni belirli bir giriş alanına yazar
+select: Bir açılır menüden bir seçenek seçer
+clear: Belirli bir giriş alanının içeriğini temizler
+check: Bir onay kutusunu seçer
+uncheck: Bir onay kutusunun seçimini kaldırır
+Doğrulamalar ve Doğrulamalar:
+
+assert title: Sayfa başlığının belirli bir değere eşleştiğini doğrular
+assert text: Belirli bir öğenin metninin belirli bir değere eşleştiğini doğrular
+assert element present: Belirli bir öğenin sayfada mevcut olduğunu doğrular
+assert element not present: Belirli bir öğenin sayfada mevcut olmadığını doğrular
+verify title: Sayfa başlığının belirli bir değere eşleştiğini doğrular
+verify text: Belirli bir öğenin metninin belirli bir değere eşleştiğini doğrular
+verify element present: Belirli bir öğenin sayfada mevcut olduğunu doğrular
+verify element not present: Belirli bir öğenin sayfada mevcut olmadığını doğrular
+Bekleme Komutları:
+
+wait element visible: Belirli bir öğenin sayfada görünür olana kadar bekler
+wait element clickable: Belirli bir öğenin tıklanabilir olana kadar bekler
+wait element not visible: Belirli bir öğenin sayfada görünmez olana kadar bekler
+wait element not clickable: Belirli bir öğenin tıklanabilir hale gelene kadar bekler
+wait timeout: Bekleme işlemleri için bir zaman aşımı belirler
+Diğer Komutlar:
+
+store text: Belirli bir öğenin metnini bir değişkende depolar
+store attribute: Bir öğenin belirli bir özelliğinin değerini bir değişkende depolar
+store element: Belirli bir öğeye bir referansı bir değişkende depolar
+execute script: Bir JavaScript kod parçasını çalıştırır
+capture screenshot: Mevcut sayfanın ekran görüntüsünü yakalar
+Selenium IDE'yi Python ile Kullanma:
+
+Selenium IDE, Selenium WebDriver kütüphanesi kullanılarak Python ile entegre edilebilir. Bu, daha karmaşık test senaryoları yazmanıza ve Python programlamanın gücünden yararlanmanıza olanak tanır.
+
+Python ile Selenium IDE Komut Örneği:
+
+Python
+from selenium import webdriver
+
+# Tarayıcıyı açın ve bir URL'ye gidin
+driver = webdriver.Chrome()
+driver.get("https://www.example.com")
+
+# ID'ye göre bir öğe bulun ve üzerine tıklayın
+element = driver.find_element_by_id("my-button")
+element.click()
+
+# CSS seçiciye göre bir öğe bulun ve metin girin
+element = driver.find_element_by_css_selector("#my-input")
+element.send_keys("Merhaba Dünya!")
+
+# Bir öğenin metnini al
+element = driver.find_element_by_tag_name("h1")
+text = element.text
+print(text)
+
+# Tarayıcıyı kapat
+driver.quit()
+Use code with caution.
+content_copy
+Selenium IDE Kullanım İpuçları:
+
+Deneyim kazandıkça basit test senaryolarıyla başlayın ve karmaşıklığı kademeli olarak artırın.
+Senaryolarınızı daha okunabilir hale getirmek için öğeleriniz ve değişkenleriniz için açıklayıcı adlar kullanın.
+Karmaşık test senaryolarını
